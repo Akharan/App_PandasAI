@@ -4,3 +4,4 @@ exports/
 pandasai.log
 .env
 workshop.ipynb
+agent_local.py

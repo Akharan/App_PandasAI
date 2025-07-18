@@ -12,15 +12,14 @@ import pickle
 import os
 import numpy as np
 
-
 class QA_Agent:
     def __init__(self, dfs:list[pai.DataFrame]):
         self.dfs = dfs
         self.llm = AzureOpenAI(
-                api_token=os.getenv("AZURE_API_KEY"),
-                azure_endpoint=os.getenv("AZURE_ENDPOINT"),
-                api_version=os.getenv("API_VERSION"),
-                deployment_name=os.getenv("MODEL"),
+                api_token=st.secrets["api"]["AZURE_API_KEY"],
+                azure_endpoint=st.secrets["api"]["AZURE_ENDPOINT"],
+                api_version=st.secrets["api"]["API_VERSION"],
+                deployment_name=st.secrets["api"]["MODEL"],
                 enable_memory=True)
         
         pai.config.set({"llm": self.llm, 
