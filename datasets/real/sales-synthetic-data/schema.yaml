@@ -1,0 +1,111 @@
+name: sales_synthetic_data
+source:
+  type: parquet
+  path: data.parquet
+description: 'Column ''vcid or relid'' has unique values like: [''VCID66'', ''VCID3'',
+  ''VCID96'', ''VCID52'', ''VCID31'']
+
+  Column ''Location id'' has unique values like: [''LOC45'', ''LOC17'', ''LOC25'',
+  ''LOC32'', ''LOC100'']
+
+  Column ''AccountGroup id'' has unique values like: [''AGID39'', ''AGID1'', ''AGID20'',
+  ''AGID77'', ''AGID92'']
+
+  Column ''Product'' has unique values like: [''Cimerli'', ''EYLEA'', ''Vabysmo'',
+  ''Lucentis'', ''EYLEA HD'']
+
+  Column ''Product Form'' has unique values like: [''PFS'', ''VIAL'']
+
+  Column ''Week Ending'' has unique values like: [Timestamp(''2023-09-16 00:00:00''),
+  Timestamp(''2023-01-22 00:00:00''), Timestamp(''2023-05-26 00:00:00''), Timestamp(''2023-08-24
+  00:00:00''), Timestamp(''2023-09-24 00:00:00'')]
+
+  Column ''Month'' has unique values like: [Timestamp(''2023-04-01 00:00:00''), Timestamp(''2023-03-01
+  00:00:00''), Timestamp(''2023-08-01 00:00:00''), Timestamp(''2023-09-01 00:00:00''),
+  Timestamp(''2023-02-01 00:00:00'')]
+
+  Column ''Quarter'' has unique values like: [''Q3'', ''Q1'', ''Q4'', ''Q2'']
+
+  Column ''Sales'' has unique values like: [58, 11, 27, 90, 61]
+
+  Column ''AccountGroup Name'' has unique values like: [''Medical Group 23'', ''Medical
+  Group 66'', ''Medical Group 93'', ''Medical Group 60'', ''Medical Group 100'']
+
+  Column ''AccountGroup Address'' has unique values like: [''USNS Kramer, FPO AP 08777'',
+  ''25291 Johnson Hollow, North Gary, NC 08217'', ''28774 Matthew Island Suite 262,
+  Douglasview, MI 62520'', ''241 Barry Radial Apt. 619, Hudsonfort, AR 61671'', ''USCGC
+  Richards, FPO AE 44890'']
+
+  Column ''acc_zip'' has unique values like: [18542, 63079, 83998, 24320, 22377]
+
+  Column ''agid_pe_parent'' has unique values like: [''AGP80'', ''AGP54'', ''AGP1'',
+  ''AGP60'', ''AGP67'']
+
+  Column ''vcid_pe_parent'' has unique values like: [''VCP23'', ''VCP96'', ''VCP21'',
+  ''VCP43'', ''VCP75'']
+
+  Column ''Eylea Quintile'' has unique values like: [2, 5, 1, 4, 3]
+
+  Column ''GPO Tier'' has unique values like: [''Tier 1'', ''Tier 2'', ''Tier 3'']
+
+  Column ''DEMS Territory'' has unique values like: [''DEMS-T22'', ''DEMS-T95'', ''DEMS-T30'',
+  ''DEMS-T59'', ''DEMS-T19'']
+
+  Column ''DEMS Region'' has unique values like: [''West'', ''South Central'', ''Southeast'',
+  ''Great Lakes'', ''Northeast'']
+
+  Column ''MS Territory'' has unique values like: [''MS-T35'', ''MS-T38'', ''MS-T24'',
+  ''MS-T55'', ''MS-T36'']
+
+  Column ''MS Region'' has unique values like: [''Southeast'', ''Great Lakes'', ''West'',
+  ''North Central'', ''Southwest'']
+
+  Column ''RBM Territory'' has unique values like: [''RBM-T76'', ''RBM-T66'', ''RBM-T35'',
+  ''RBM-T100'', ''RBM-T9'']
+
+  Column ''RBM Region'' has unique values like: [''West'', ''Northeast'', ''Southeast'']'
+columns:
+- name: vcid or relid
+  description: Unique identifier for a vendor or related entity
+- name: Location id
+  description: Unique identifier for a location
+- name: AccountGroup id
+  description: Unique identifier for an account group
+- name: Product
+  description: Name of the product
+- name: Product Form
+  description: Form of the product (e.g., PFS, VIAL)
+- name: Week Ending
+  description: Date marking the end of the week
+- name: Month
+  description: First day of the month
+- name: Quarter
+  description: Quarter of the year (e.g., Q1, Q2)
+- name: Sales
+  description: Number of sales
+- name: AccountGroup Name
+  description: Name of the account group
+- name: AccountGroup Address
+  description: Address of the account group
+- name: acc_zip
+  description: ZIP code of the account
+- name: agid_pe_parent
+  description: Parent identifier for the account group
+- name: vcid_pe_parent
+  description: Parent identifier for the vendor or related entity
+- name: Eylea Quintile
+  description: Quintile ranking for Eylea product
+- name: GPO Tier
+  description: Tier level for Group Purchasing Organization
+- name: DEMS Territory
+  description: Territory identifier for DEMS
+- name: DEMS Region
+  description: Region identifier for DEMS
+- name: MS Territory
+  description: Territory identifier for MS
+- name: MS Region
+  description: Region identifier for MS
+- name: RBM Territory
+  description: Territory identifier for RBM
+- name: RBM Region
+  description: Region identifier for RBM

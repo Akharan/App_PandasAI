@@ -1,0 +1,6 @@
+__pycache__/
+app_env/
+exports/
+pandasai.log
+.env
+workshop.ipynb
